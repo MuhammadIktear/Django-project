@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block table %}
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">UserId</th>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">Body</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in info %}
+            <tr>
+                <th scope="row">{{ item.userId }}</th>
+                <td>{{ item.id }}</td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.body }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block lorem_text %}
+{% endblock %}
